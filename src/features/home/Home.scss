@@ -1,0 +1,16 @@
+main{
+    margin-top: 40px;
+    .input-div{
+        margin: 0 auto;
+        width: 500px;
+        input{
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        div{
+            margin-top: 3px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+    }
+}
