@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useLazyGetUserQuery, useSearchUsersQuery } from "../../app/github.api"
+import { useLazyGetUserQuery, useSearchUsersQuery } from "../../app/github/github.api"
 import './Home.scss'
 import useDebounce from "../../hook/debounce"
 import Repo from "./Repo"

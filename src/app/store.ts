@@ -1,9 +1,11 @@
-import { configureStore, ThunkAction, Action, getDefaultMiddleware } from '@reduxjs/toolkit';
-import githubApi from './github.api';
+import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import githubApi from './github/github.api';
+import reducer from './github/github.slice';
 
 export const store = configureStore({
   reducer: {
-    [githubApi.reducerPath]: githubApi.reducer
+    [githubApi.reducerPath]: githubApi.reducer,
+    github: reducer
   },
   middleware: getDefaultMiddleware => getDefaultMiddleware().concat(githubApi.middleware)
 });

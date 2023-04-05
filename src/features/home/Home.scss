@@ -20,14 +20,21 @@ main{
         overflow-y: scroll;
     }
     li{
-        padding: 3px;
+        padding: 5px 3px;
         margin-top: 3px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    }
+    li:hover{
+        background-color: rgba(235, 235, 235, 0.7);
     }
     .repo-card{
         margin-top: 3px;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
         padding: 5px 10px;
+        a{
+            text-decoration: none;
+            color: black;
+        }
         .watch-repo{
             margin-left: 10px;
         }
@@ -39,6 +46,9 @@ main{
         .bold{
             font-weight: 500;
         }
+    }
+    .repo-card:hover{
+        background-color: rgba(235, 235, 235, 0.7);
     }
 }
 

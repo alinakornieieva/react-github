@@ -1,5 +1,5 @@
-import { ReposResponse } from '../models/models_repos';
-import { IUser, UsersResponse } from './../models/models';
+import { ReposResponse } from '../../models/models_repos';
+import { IUser, UsersResponse } from '../../models/models';
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 
 const githubApi = createApi({
