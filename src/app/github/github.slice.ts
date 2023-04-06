@@ -1,12 +1,14 @@
 import { IFav } from './../../models/models_fav';
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+const FAV_REPOS = 'favouriteRepos'
+
 type initialStateType = {
     favourites: IFav[]
 }
 
 const initialState: initialStateType = {
-    favourites: []
+    favourites: JSON.parse(localStorage.getItem(FAV_REPOS) ?? '[]')
 }
 
 const GithubSlice = createSlice({
@@ -17,10 +19,12 @@ const GithubSlice = createSlice({
             const findElem = state.favourites.find(el => el.id === action.payload.id)
             if (!findElem) {
                 state.favourites.push(action.payload)
+                localStorage.setItem(FAV_REPOS, JSON.stringify(state.favourites))
             }
         },
         deleteRepo: (state, action: PayloadAction<number>) => {
             state.favourites = state.favourites.filter(item => item.id !== action.payload)
+            localStorage.setItem(FAV_REPOS, JSON.stringify(state.favourites))
         }
     }
 })
