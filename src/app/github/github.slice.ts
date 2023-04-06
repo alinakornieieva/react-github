@@ -14,7 +14,10 @@ const GithubSlice = createSlice({
     initialState,
     reducers: {
         addRepo: (state, action: PayloadAction<IFav>) => {
-            state.favourites.push(action.payload)
+            const findElem = state.favourites.find(el => el.id === action.payload.id)
+            if (!findElem) {
+                state.favourites.push(action.payload)
+            }
         },
         deleteRepo: (state, action: PayloadAction<number>) => {
             state.favourites = state.favourites.filter(item => item.id !== action.payload)

@@ -2,6 +2,9 @@ main{
     padding: 40px 0;
     width: 500px;
     margin: 0 auto;
+    p{
+        text-align: center;
+    }
     input{
         padding: 5px;
         font-size: 18px;
@@ -45,6 +48,13 @@ main{
         }
         .bold{
             font-weight: 500;
+        }
+        button{
+            border: none;
+            background-color: rgb(210, 208, 208);
+            margin: 8px 0;
+            padding: 5px 10px;
+            border-radius: 3px;
         }
     }
     .repo-card:hover{
